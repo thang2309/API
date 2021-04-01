@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pokemon</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Changa:wght@200;300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./scss/main.scss">
+</head>
+
+<body>
+  <div id="aloha"></div>
+  <!-- <a id="test" href="./detail.html" target="_blank">click</a> -->
+  <a id="button">
+    <svg class="icon">
+      <use xlink:href="#top" />
+    </svg>
+  </a>
+  <div class="header">
+    <img src="https://raw.githubusercontent.com/PokeAPI/media/master/logo/pokeapi_256.png" class="header__logo" alt="">
+  </div>
+  <div class="container">
+    <row>
+      <div class="poke">
+        <div class="poke__header">
+          <div class="poke__sort">
+            <select name="sort" id="sort">
+              <option value="1">Low to high</option>
+              <option value="2">High to low</option>
+              <option value="3">A-Z</option>
+              <option value="4">Z-A</option>
+            </select>
+          </div>
+          <div class="poke__search">
+            <label for="search">
+              Search :
+            </label>
+            <input id="search" type="text" placeholder="Search name">
+          </div>
+        </div>
+
+
+        <div id="container-poke">
+
+        </div>
+        <div class="paging__button">
+          <button id="prev">
+            <svg class="icon">
+              <use xlink:href="#left" />
+            </svg>
+          </button>
+          <button id="next">
+            <svg class="icon">
+              <use xlink:href="#right" />
+            </svg>
+          </button>
+        </div>
+        <button id="show-poke" title="Show poke"><img src="img/pokemon-go.png" alt=""></button>
+      </div>
+
+    </row>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+  <!-- <script type="module" src="./modules/global.js">
+
+    </script> -->
+  <!-- <script src="./modules/global.js" type="module" ></script> -->
+  <!-- <script>
+    $(function () {
+      $('#aloha').load('./svg/sprite.svg');
+    })
+
+  </script> -->
+  <!-- <script type="module" src="dist/bundle.js"></script> -->
+</body>
+
+</html>

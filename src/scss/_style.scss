@@ -1,0 +1,196 @@
+// index
+body {
+  font-family: "Changa", sans-serif;
+}
+.header {
+  display: block;
+  text-align: center;
+  background-color: rgb(126, 142, 196);
+  padding: 10px;
+  .header__logo {
+    color: #fff;
+  }
+}
+.container {
+  .poke {
+    .poke__header {
+      margin: 20px 0;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      .poke__sort{
+        margin: 0 10px;
+        #sort{
+          width: 200px;
+          font-size: 15px;
+          padding: 3px 5px;
+          outline: none;
+        }
+      }
+      .poke__search {
+        justify-content: flex-end;
+        display: flex;
+        align-items: center;
+        margin: 0 10px;
+        label {
+          font-size: 16px;
+          margin: 0 10px 0 0;
+        }
+        input {
+          border: 1px solid #746969;
+          outline: none;
+          border-radius: 4px;
+          padding: 5px;
+          width: 210px;
+          &::placeholder {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+
+    #container-poke {
+      display: flex;
+      flex-wrap: wrap;
+      .card {
+        // width: 300px;
+        // height: 300px;
+        padding: 10px;
+        & div:first-child {
+          text-align: center;
+        }
+        .card-img-top {
+          // background: #f5efe6;
+          padding: 5px 0;
+          // border-radius: 8px;
+        }
+        .card-body {
+          padding: 1.25rem 1.25rem 0 1.25rem;
+          flex: none;
+          .card__name {
+            text-decoration: none;
+            color: #000;
+            transition: 0.4s;
+            font-size: 25px;
+            &:hover {
+              color: rgb(105, 171, 173);
+              transition: 0.4s;
+            }
+          }
+        }
+        .poke-box {
+          display: flex;
+          justify-content: space-between;
+          ul {
+            padding-left: 20px;
+            li {
+              list-style-type: none;
+              padding-left: 10px;
+            }
+          }
+        }
+      }
+      .img {
+        max-width: 200px;
+        height: 200px;
+        object-fit: contain;
+      }
+    }
+  }
+  #show-poke {
+    display: block;
+    text-align: center;
+    outline: none;
+    margin: auto;
+    border: 1px transparent;
+    border-radius: 30px;
+    background-color: rgb(178, 222, 236);
+    margin-top: 20px;
+    transition: 0.4s;
+    &:hover {
+      background-color: rgb(212, 230, 236);
+      transition: 0.4s;
+    }
+    cursor: pointer;
+    img {
+      width: 50px;
+      height: 50px;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+  }
+  .paging__button {
+    display: flex;
+    justify-content: flex-end;
+    display: none;
+    #prev,
+    #next {
+      background-color: rgb(136, 155, 219);
+      color: #fff;
+      border: transparent;
+      padding: 6px;
+      cursor: pointer;
+      margin: 5px 10px;
+      transition: 0.4s;
+      outline: none;
+      // visibility: hidden;
+      line-height: 3px;
+      // border-radius: 30px;
+      border-radius: 4px;
+      &:hover {
+        transition: 0.4s;
+        background-color: rgb(172, 184, 223);
+      }
+      .icon {
+        width: 20px;
+        height: 20px;
+        padding: 2px;
+        fill: #fff;
+      }
+    }
+  }
+}
+
+// button
+#button {
+  display: inline-block;
+  background-color: #ff9800;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  border-radius: 4px;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  transition: background-color 0.3s, opacity 0.5s, visibility 0.5s;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
+  .icon {
+    width: 20px;
+    height: 50px;
+  }
+}
+// #button::after {
+//   content: "\f077";
+//   font-family: FontAwesome;
+//   font-weight: normal;
+//   font-style: normal;
+//   font-size: 2em;
+//   line-height: 50px;
+//   color: #fff;
+// }
+#button:hover {
+  cursor: pointer;
+  background-color: #333;
+  .icon {
+    fill: #fff;
+  }
+}
+#button:active {
+  background-color: #555;
+}
+#button.show {
+  opacity: 1;
+  visibility: visible;
+}
